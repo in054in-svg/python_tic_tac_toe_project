@@ -3,7 +3,7 @@ from output import show_board, show_menu
 from validation import check_cell
 from board_func import add_cell, check_if_win, check_if_draw
 
-board = [None for n in range(9)]
+board = [None] * 9
 turn_of = 'x'
 
 if __name__ == '__main__':
@@ -20,7 +20,7 @@ if __name__ == '__main__':
         
         
         if check_if_win(board, turn_of):
-            print(show_board(board), f'Player {turn_of} WIN!')
+            print(show_board(board), f'Player {turn_of} WIN!', sep='')
             break
         
         if check_if_draw(board):

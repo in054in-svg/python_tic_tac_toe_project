@@ -16,9 +16,9 @@ def check_if_win(board: list, type: str) -> bool:
     ]
     
     for line in WINNING_LINES:
-        if board[line[0]] == type\
-        and board[line[1]] == type\
-        and board[line[2]] == type:
+        if board[line[0]]\
+        == board[line[1]]\
+        == board[line[2]] == type:
             return True
         
     return False
